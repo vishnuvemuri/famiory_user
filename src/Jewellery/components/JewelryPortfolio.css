@@ -1,0 +1,754 @@
+/* Jewelry Portfolio Component Styles */
+.jewelry-portfolio {
+  font-family: 'Georgia', serif;
+  color: #333;
+  background-color: #f9f5f0;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.jewelry-portfolio * {
+  box-sizing: border-box;
+}
+
+/* CSS Variables for Consistency */
+.jewelry-portfolio {
+  --jp-primary-color: #b8860b;
+  --jp-primary-dark: #8b4513;
+  --jp-background-color: #f9f5f0;
+  --jp-text-color: #333;
+  --jp-border-color: #e0e0e0;
+  --jp-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --jp-transition: all 0.3s ease;
+}
+
+/* Header Section */
+.jewelry-portfolio-header {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+
+.jewelry-portfolio-title {
+  font-size: 3rem;
+  color: var(--jp-primary-color);
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.jewelry-portfolio-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Brand Info Section */
+.jewelry-portfolio-brand-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.jewelry-portfolio-brand-logo {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.jewelry-portfolio-brand-logo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-default-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background: var(--jp-primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-brand-info {
+  flex: 2;
+  min-width: 300px;
+}
+
+.jewelry-portfolio-brand-info h2 {
+  font-size: 2rem;
+  color: var(--jp-primary-dark);
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-brand-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: var(--jp-text-color);
+}
+
+/* Cultural Bridal Section */
+.jewelry-portfolio-cultural-section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.jewelry-portfolio-cultural-section h2 {
+  font-size: 2rem;
+  color: var(--jp-primary-dark);
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-cultural-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.jewelry-portfolio-cultural-btn {
+  padding: 10px 20px;
+  background-color: #f0e6d2;
+  border: 1px solid #d4a76a;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--jp-transition);
+  font-weight: bold;
+  color: var(--jp-primary-dark);
+  font-family: 'Georgia', serif;
+}
+
+.jewelry-portfolio-cultural-btn:hover,
+.jewelry-portfolio-cultural-btn.active {
+  background-color: #d4a76a;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.jewelry-portfolio-cultural-gallery {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.jewelry-portfolio-cultural-item {
+  width: 100%;
+  max-width: 400px;
+  transition: transform var(--jp-transition);
+}
+
+.jewelry-portfolio-cultural-item:hover {
+  transform: scale(1.03);
+}
+
+.jewelry-portfolio-cultural-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--jp-shadow);
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.jewelry-portfolio-cultural-caption {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: bold;
+  color: var(--jp-primary-dark);
+  font-size: 1.2rem;
+}
+
+.jewelry-portfolio-know-more-btn {
+  display: block;
+  width: 150px;
+  margin: 15px auto;
+  padding: 10px;
+  background-color: var(--jp-primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--jp-transition);
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-know-more-btn:hover {
+  background-color: var(--jp-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Design Led Jewellery Section */
+.jewelry-portfolio-design-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.jewelry-portfolio-design-section h2 {
+  font-size: 2rem;
+  color: var(--jp-primary-dark);
+  margin-bottom: 40px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-design-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jewelry-portfolio-design-item {
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+  transition: transform var(--jp-transition);
+}
+
+.jewelry-portfolio-design-item:hover {
+  transform: translateY(-5px);
+}
+
+.jewelry-portfolio-model-container {
+  width: 100%;
+  height: 430px;
+  overflow: visible;
+  border-radius: 8px;
+  box-shadow: var(--jp-shadow);
+  position: relative;
+}
+
+.jewelry-portfolio-model-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--jp-transition);
+  border-radius: 10px;
+}
+
+.jewelry-portfolio-design-item:hover .jewelry-portfolio-model-image {
+  transform: scale(1.05);
+}
+
+.jewelry-portfolio-jewelry-image {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: var(--jp-shadow);
+  background: white;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.jewelry-portfolio-jewelry-name {
+  margin-top: 100px;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--jp-text-color);
+}
+
+.jewelry-portfolio-jewelry-title {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--jp-text-color);
+  margin-bottom: 5px;
+}
+
+.jewelry-portfolio-jewelry-subtitle {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Featured Collections Section */
+.jewelry-portfolio-featured-section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.jewelry-portfolio-featured-section h2 {
+  font-size: 2rem;
+  color: var(--jp-primary-dark);
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-featured-container {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jewelry-portfolio-featured-item {
+  cursor: pointer;
+  transition: transform var(--jp-transition);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-featured-item:hover {
+  transform: scale(1.03);
+}
+
+.jewelry-portfolio-featured-item.main {
+  flex: 2;
+  min-width: 400px;
+}
+
+.jewelry-portfolio-featured-item.sub {
+  flex: 1;
+  min-width: 250px;
+}
+
+.jewelry-portfolio-featured-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Wedding Occasion Section */
+.jewelry-portfolio-occasion-section {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.jewelry-portfolio-occasion-section h2 {
+  font-size: 2rem;
+  color: var(--jp-primary-dark);
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-occasion-gallery {
+  position: relative;
+  margin: 30px 0;
+}
+
+.jewelry-portfolio-occasion-images {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.jewelry-portfolio-occasion-images::-webkit-scrollbar {
+  display: none;
+}
+
+.jewelry-portfolio-occasion-item {
+  flex: 0 0 auto;
+  width: 150px;
+  cursor: pointer;
+  transition: transform var(--jp-transition);
+}
+
+.jewelry-portfolio-occasion-item:hover {
+  transform: scale(1.05);
+}
+
+.jewelry-portfolio-occasion-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-occasion-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--jp-primary-dark);
+}
+
+.jewelry-portfolio-gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--jp-primary-dark);
+  transition: var(--jp-transition);
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-gallery-nav:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.jewelry-portfolio-gallery-nav.left {
+  left: 10px;
+}
+
+.jewelry-portfolio-gallery-nav.right {
+  right: 10px;
+}
+
+/* Store Locator Section */
+.jewelry-portfolio-locator-section {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1454180/pexels-photo-1454180.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 50px 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.jewelry-portfolio-locator-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.jewelry-portfolio-locator-content h2,
+.jewelry-portfolio-locator-content h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.jewelry-portfolio-locator-content h2 {
+  font-size: 2rem;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-locator-content h3 {
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-locator-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.jewelry-portfolio-find-now-btn {
+  padding: 12px 25px;
+  background-color: var(--jp-primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--jp-transition);
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jewelry-portfolio-find-now-btn:hover {
+  background-color: var(--jp-primary-dark);
+  transform: translateY(-2px);
+}
+
+.jewelry-portfolio-store-images {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.jewelry-portfolio-store-img {
+  width: calc(50% - 5px);
+  height: 120px;
+}
+
+.jewelry-portfolio-store-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Footer Section */
+.jewelry-portfolio-footer {
+  background-color: #f5f5f5;
+  padding: 60px 20px 30px;
+  border-top: 1px solid var(--jp-border-color);
+  margin-top: 50px;
+  border-radius: 10px 10px 0 0;
+}
+
+.jewelry-portfolio-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.jewelry-portfolio-footer-item {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+.jewelry-portfolio-jeweler-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--jp-text-color);
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', serif;
+}
+
+.jewelry-portfolio-website-link a {
+  color: var(--jp-primary-color);
+  font-weight: 600;
+  transition: var(--jp-transition);
+  text-decoration: none;
+}
+
+.jewelry-portfolio-website-link a:hover {
+  color: var(--jp-primary-dark);
+  transform: translateY(-2px);
+}
+
+.jewelry-portfolio-social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.jewelry-portfolio-social-icon {
+  color: var(--jp-primary-color);
+  transition: var(--jp-transition);
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(184, 134, 11, 0.1);
+}
+
+.jewelry-portfolio-social-icon:hover {
+  color: var(--jp-primary-dark);
+  transform: translateY(-3px) scale(1.1);
+  background: rgba(184, 134, 11, 0.2);
+}
+
+.jewelry-portfolio-contact-info span {
+  font-weight: 600;
+  color: var(--jp-text-color);
+}
+
+.jewelry-portfolio-store-locations {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.jewelry-portfolio-store-locations h4 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  color: var(--jp-primary-dark);
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.jewelry-portfolio-store-locations h4::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--jp-primary-color);
+}
+
+.jewelry-portfolio-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.jewelry-portfolio-location-item {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--jp-shadow);
+  transition: var(--jp-transition);
+}
+
+.jewelry-portfolio-location-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.jewelry-portfolio-location-item strong {
+  font-size: 1.2rem;
+  color: var(--jp-primary-dark);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.jewelry-portfolio-more-stores {
+  display: block;
+  margin: 40px auto 0;
+  color: var(--jp-primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--jp-transition);
+  text-align: center;
+  max-width: 200px;
+  padding: 12px;
+  border: 2px solid var(--jp-primary-color);
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.jewelry-portfolio-more-stores:hover {
+  background-color: var(--jp-primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Back to Top Button */
+.jewelry-portfolio-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--jp-primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--jp-transition);
+  z-index: 100;
+  box-shadow: var(--jp-shadow);
+}
+
+.jewelry-portfolio-back-to-top:hover {
+  background-color: var(--jp-primary-dark);
+  transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .jewelry-portfolio-brand-section,
+  .jewelry-portfolio-featured-container {
+    flex-direction: column;
+  }
+  
+  .jewelry-portfolio-design-item {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .jewelry-portfolio-occasion-item {
+    width: 120px;
+  }
+  
+  .jewelry-portfolio-title {
+    font-size: 2.5rem;
+  }
+  
+  .jewelry-portfolio-cultural-buttons {
+    gap: 8px;
+  }
+  
+  .jewelry-portfolio-cultural-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .jewelry-portfolio-locator-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .jewelry-portfolio {
+    padding: 10px;
+  }
+  
+  .jewelry-portfolio-title {
+    font-size: 2rem;
+  }
+  
+  .jewelry-portfolio-design-section h2,
+  .jewelry-portfolio-cultural-section h2,
+  .jewelry-portfolio-featured-section h2,
+  .jewelry-portfolio-occasion-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .jewelry-portfolio-occasion-item {
+    width: 100px;
+  }
+  
+  .jewelry-portfolio-cultural-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .jewelry-portfolio-footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

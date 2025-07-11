@@ -1,0 +1,519 @@
+/* Her First Step Component Styles - Scoped to avoid CSS conflicts */
+.her-first-step-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.her-first-step-container * {
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.her-first-step-hero {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.her-first-step-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.her-first-step-overlay h1 {
+  font-family: 'Georgia', serif;
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.her-first-step-overlay p {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  max-width: 700px;
+}
+
+.her-first-step-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(212, 175, 55, 0.9);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.her-first-step-back-btn:hover {
+  background: rgba(153, 101, 21, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Description */
+.her-first-step-description {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.her-first-step-description p {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Upload Section */
+.her-first-step-upload-section {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.her-first-step-upload-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  color: #996515;
+  margin-bottom: 20px;
+}
+
+.her-first-step-upload-section p {
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.her-first-step-upload-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.her-first-step-upload-btn {
+  padding: 12px 25px;
+  background: #D4AF37;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.her-first-step-upload-btn:hover {
+  background: #996515;
+  transform: translateY(-2px);
+}
+
+/* Featured Video Section */
+.her-first-step-featured-video-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.her-first-step-featured-video-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #996515;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.her-first-step-autoplay-video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.her-first-step-autoplay-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+/* Featured Photos Section */
+.her-first-step-featured-photos {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.her-first-step-featured-photos h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #996515;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.her-first-step-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.her-first-step-featured-photo {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+}
+
+.her-first-step-featured-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Display Section */
+.her-first-step-media-display {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+.her-first-step-media-display h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #996515;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.her-first-step-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.her-first-step-media-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+}
+
+.her-first-step-media-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.her-first-step-media-item img,
+.her-first-step-media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.her-first-step-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.her-first-step-media-item:hover .her-first-step-play-icon {
+  opacity: 1;
+  background: rgba(212, 175, 55, 0.9);
+}
+
+.her-first-step-delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.her-first-step-media-item:hover .her-first-step-delete-btn {
+  opacity: 1;
+}
+
+/* Fullscreen Viewer */
+.her-first-step-fullscreen-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.her-first-step-fullscreen-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.her-first-step-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.her-first-step-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.her-first-step-nav-btn:hover {
+  background: #D4AF37;
+}
+
+.her-first-step-prev-btn {
+  left: 20px;
+}
+
+.her-first-step-next-btn {
+  right: 20px;
+}
+
+.her-first-step-media-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1001;
+  align-items: center;
+}
+
+.her-first-step-media-control-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.her-first-step-volume-slider {
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* Context Menu */
+.her-first-step-context-menu {
+  position: absolute;
+  display: block;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+}
+
+.her-first-step-context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.her-first-step-context-menu li {
+  cursor: pointer;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.her-first-step-context-menu li:last-child {
+  border-bottom: none;
+}
+
+.her-first-step-context-menu li:hover {
+  background: #f5f5f5;
+}
+
+/* Footer */
+.her-first-step-footer {
+  background: #996515;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.her-first-step-footer p {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .her-first-step-overlay h1 {
+    font-size: 4rem;
+  }
+
+  .her-first-step-overlay p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .her-first-step-overlay h1 {
+    font-size: 3rem;
+  }
+
+  .her-first-step-overlay p {
+    font-size: 1rem;
+  }
+
+  .her-first-step-media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .her-first-step-upload-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .her-first-step-upload-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .her-first-step-photos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .her-first-step-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .her-first-step-media-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .her-first-step-upload-section {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .her-first-step-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .her-first-step-media-grid {
+    grid-template-columns: 1fr;
+  }
+}

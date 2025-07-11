@@ -1,0 +1,546 @@
+/* Royal Invitations Component Styles - Scoped to prevent conflicts */
+.royal-invitations {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #555;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.royal-invitations * {
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+.royal-invitations {
+  --ri-primary-color: #d4af37;
+  --ri-secondary-color: #8b6e3c;
+  --ri-dark-color: #333;
+  --ri-light-color: #f8f8f8;
+  --ri-text-color: #555;
+  --ri-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+.royal-invitations h1, 
+.royal-invitations h2, 
+.royal-invitations h3, 
+.royal-invitations h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--ri-dark-color);
+  margin: 0;
+}
+
+/* Container */
+.ri-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Back to Selection Button */
+.ri-back-to-selection {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: var(--ri-primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--ri-shadow);
+}
+
+.ri-back-to-selection:hover {
+  background-color: var(--ri-secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Loading Spinner */
+.ri-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.ri-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--ri-light-color);
+  border-top: 4px solid var(--ri-primary-color);
+  border-radius: 50%;
+  animation: ri-spin 1s linear infinite;
+}
+
+@keyframes ri-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Header */
+.ri-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.pexels.com/photos/1024991/pexels-photo-1024991.jpeg?auto=compress&cs=tinysrgb&w=1350&h=900&fit=crop') 
+              no-repeat center center/cover;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ri-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ri-header-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.ri-header-content p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.ri-brand-container {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+}
+
+.ri-brand-name {
+  font-size: 2.5rem;
+  color: var(--ri-primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.ri-brand-logo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: white;
+  padding: 10px;
+  box-shadow: var(--ri-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.ri-brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Brand Section */
+.ri-brand-section {
+  padding-top: 120px;
+  background-color: white;
+}
+
+/* Services Section */
+.ri-services {
+  padding: 100px 0 60px;
+  background-color: var(--ri-light-color);
+}
+
+.ri-section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ri-section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.ri-section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--ri-primary-color);
+}
+
+.ri-services-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.ri-service-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: white;
+  color: var(--ri-dark-color);
+  border: 1px solid var(--ri-primary-color);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  font-family: inherit;
+}
+
+.ri-service-btn-large {
+  padding: 20px 40px;
+  font-size: 1.3rem;
+}
+
+.ri-service-btn-medium {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+}
+
+.ri-service-btn:hover {
+  background-color: var(--ri-primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--ri-shadow);
+}
+
+/* Why Choose Us */
+.ri-why-choose-us {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.ri-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.ri-feature {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.ri-feature:hover {
+  background-color: var(--ri-light-color);
+  transform: translateY(-5px);
+}
+
+.ri-feature-icon {
+  color: var(--ri-primary-color);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ri-feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.ri-feature p {
+  color: var(--ri-text-color);
+  margin: 0;
+}
+
+/* Portfolio Section */
+.ri-portfolio {
+  padding: 60px 0;
+  background-color: var(--ri-light-color);
+}
+
+.ri-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.ri-portfolio-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--ri-shadow);
+  background-color: white;
+}
+
+.ri-portfolio-item img,
+.ri-portfolio-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ri-portfolio-item:hover img,
+.ri-portfolio-item:hover video {
+  transform: scale(1.05);
+}
+
+.ri-image-item {
+  height: 300px;
+}
+
+/* Policies Section */
+.ri-policies {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.ri-policy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ri-policy-item {
+  margin-bottom: 30px;
+}
+
+.ri-policy-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--ri-primary-color);
+}
+
+.ri-policy-item ul {
+  list-style-position: inside;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.ri-policy-item li {
+  margin-bottom: 10px;
+  color: var(--ri-text-color);
+}
+
+/* Contact Section */
+.ri-contact {
+  padding: 60px 0;
+  background-color: var(--ri-light-color);
+}
+
+.ri-contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ri-contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.ri-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.ri-info-icon {
+  color: var(--ri-primary-color);
+  margin-right: 15px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.ri-info-text {
+  flex: 1;
+  color: var(--ri-text-color);
+}
+
+.ri-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.ri-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--ri-primary-color);
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.ri-social-links a:hover {
+  background-color: var(--ri-secondary-color);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.ri-footer {
+  background-color: var(--ri-dark-color);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.ri-footer p {
+  margin: 0;
+}
+
+/* Back to Top Button */
+.ri-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--ri-primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 99;
+  box-shadow: var(--ri-shadow);
+}
+
+.ri-back-to-top:hover {
+  background-color: var(--ri-secondary-color);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .ri-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ri-header-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .ri-header-content p {
+    font-size: 1.2rem;
+  }
+  
+  .ri-brand-name {
+    font-size: 2rem;
+  }
+  
+  .ri-brand-logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .ri-section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .ri-service-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .ri-service-btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+  
+  .ri-service-btn-medium {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+  
+  .ri-image-item {
+    height: 250px;
+  }
+  
+  .ri-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ri-back-to-selection {
+    top: 15px;
+    left: 15px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ri-header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .ri-section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ri-brand-name {
+    font-size: 1.8rem;
+  }
+  
+  .ri-brand-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .ri-container {
+    padding: 0 15px;
+  }
+  
+  .ri-services {
+    padding: 80px 0 40px;
+  }
+  
+  .ri-brand-section {
+    padding-top: 100px;
+  }
+
+  .ri-back-to-selection {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    width: fit-content;
+  }
+}

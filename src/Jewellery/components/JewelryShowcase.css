@@ -1,0 +1,581 @@
+/* Jewelry Showcase Component Styles */
+.jewelry-showcase {
+  font-family: 'Georgia', serif;
+  color: #333;
+  background-color: #fff;
+  position: relative;
+}
+
+.jewelry-showcase * {
+  box-sizing: border-box;
+}
+
+/* First Page Styles */
+.jewelry-first-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f9f3ee;
+  padding: 0 20px;
+}
+
+.jewelry-main-heading {
+  font-family: 'Times New Roman', serif;
+  font-size: 3.5rem;
+  color: #8b4513;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.jewelry-sub-heading {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Video Carousel Styles */
+.jewelry-video-carousel {
+  position: relative;
+  width: 70%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 9/16;
+}
+
+.jewelry-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.jewelry-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.jewelry-video.active {
+  display: block;
+}
+
+.jewelry-video-overlay-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+}
+
+.jewelry-sound-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.jewelry-sound-control:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.jewelry-volume-slider {
+  display: none;
+  width: 80px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.jewelry-sound-control:hover .jewelry-volume-slider {
+  display: block;
+}
+
+.jewelry-volume-slider:hover {
+  opacity: 1;
+}
+
+.jewelry-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #8b4513;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.jewelry-volume-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #8b4513;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.jewelry-fullscreen-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.jewelry-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.jewelry-video-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.jewelry-nav-arrow {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.jewelry-nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.jewelry-video-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.jewelry-video-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.jewelry-video-indicator.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.jewelry-video-name {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #8b4513;
+  font-weight: bold;
+  text-align: center;
+}
+
+.jewelry-visit-store-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(139, 69, 19, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.jewelry-visit-store-btn:hover {
+  background: rgba(139, 69, 19, 1);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.jewelry-scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #8b4513;
+  cursor: pointer;
+  animation: jewelry-bounce 2s infinite;
+}
+
+@keyframes jewelry-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Second Page Styles */
+.jewelry-second-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 5% 120px;
+  background-color: #fff;
+}
+
+.jewelry-filters {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.jewelry-filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.jewelry-filter-group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Multi-Select Location Filter Styles */
+.jewelry-location-input-container {
+  position: relative;
+  min-width: 300px;
+}
+
+.jewelry-location-multi-select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  min-height: 45px;
+  padding: 8px 35px 8px 12px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.jewelry-selected-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+}
+
+.jewelry-location-tag {
+  background: #8b4513;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.jewelry-remove-location {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  transition: background 0.2s ease;
+}
+
+.jewelry-remove-location:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.jewelry-location-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  min-width: 120px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.jewelry-location-search-input::placeholder {
+  color: #999;
+}
+
+.jewelry-dropdown-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  transition: transform 0.2s ease;
+}
+
+.jewelry-dropdown-arrow.open {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.jewelry-location-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.jewelry-dropdown-section {
+  border-bottom: 1px solid #eee;
+}
+
+.jewelry-dropdown-section:last-child {
+  border-bottom: none;
+}
+
+.jewelry-dropdown-header {
+  padding: 8px 12px;
+  background: #f8f9fa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+
+.jewelry-dropdown-option {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.jewelry-dropdown-option:hover {
+  background: #f5f5f5;
+}
+
+.jewelry-custom-option {
+  color: #8b4513;
+  font-style: italic;
+}
+
+.jewelry-dropdown-empty {
+  padding: 15px 12px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+.jewelry-featured-stores-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.jewelry-store-count {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.jewelry-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.jewelry-grid-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.jewelry-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.jewelry-grid-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.jewelry-grid-item h3 {
+  padding: 15px;
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.jewelry-grid-item .jewelry-location-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Back to Top Button */
+.jewelry-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #8b4513;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.jewelry-back-to-top:hover {
+  background: #a0522d;
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .jewelry-main-heading {
+    font-size: 2.5rem;
+  }
+
+  .jewelry-sub-heading {
+    font-size: 1.2rem;
+  }
+
+  .jewelry-video-carousel {
+    width: 95%;
+  }
+
+  .jewelry-video-navigation {
+    display: none;
+  }
+
+  .jewelry-video-overlay-controls {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .jewelry-filters {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .jewelry-location-input-container {
+    min-width: 280px;
+  }
+
+  .jewelry-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .jewelry-featured-stores-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jewelry-main-heading {
+    font-size: 2rem;
+  }
+
+  .jewelry-video-name {
+    font-size: 1.2rem;
+  }
+
+  .jewelry-location-input-container {
+    min-width: 250px;
+  }
+
+  .jewelry-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

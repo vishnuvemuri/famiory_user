@@ -1,0 +1,263 @@
+/* Wedding Events Component Styles - Scoped to avoid CSS conflicts */
+.wedding-events-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+              url('https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;
+  background-attachment: fixed;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wedding-events-header {
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  margin-bottom: 30px;
+}
+
+.wedding-events-title {
+  font-size: 3rem;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+  margin: 0;
+  color: #996515;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.wedding-events-subtitle {
+  font-size: 1.8rem;
+  font-family: 'Georgia', serif;
+  color: #E8A5A5;
+  margin-top: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.wedding-events-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wedding-event-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  width: 300px;
+  padding: 80px 25px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 70px 0 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.wedding-event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.wedding-event-image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid #F4E5C2;
+  overflow: hidden;
+  margin: -170px auto 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.wedding-event-image-container:hover {
+  border-color: #D4AF37;
+}
+
+.wedding-event-image-container:hover .wedding-event-upload-overlay {
+  opacity: 1;
+}
+
+.wedding-event-file-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.wedding-event-image-label {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wedding-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.wedding-event-upload-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.wedding-event-content {
+  margin-top: 150px;
+}
+
+.wedding-event-heading {
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  margin: 0 0 15px;
+  color: #333;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.wedding-event-description {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  margin: 0 auto 25px;
+  padding: 0 10px;
+  max-width: 280px;
+}
+
+.wedding-event-button {
+  background: #D4AF37;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.wedding-event-button:hover {
+  background: #996515;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .wedding-events-grid {
+    gap: 30px;
+  }
+  
+  .wedding-event-card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wedding-events-title {
+    font-size: 2.5rem;
+  }
+  
+  .wedding-events-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .wedding-events-grid {
+    gap: 20px;
+  }
+  
+  .wedding-event-image-container {
+    width: 220px;
+    height: 220px;
+    margin-top: -150px;
+  }
+  
+  .wedding-event-content {
+    margin-top: 130px;
+  }
+  
+  .wedding-event-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .wedding-events-header {
+    padding: 30px 15px;
+  }
+  
+  .wedding-events-title {
+    font-size: 2rem;
+  }
+  
+  .wedding-events-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .wedding-event-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 60px 0 20px;
+  }
+  
+  .wedding-events-grid {
+    padding: 20px 10px;
+  }
+}
+
+/* Animation for smooth loading */
+.wedding-event-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure component doesn't affect global styles */
+.wedding-events-container * {
+  box-sizing: border-box;
+}

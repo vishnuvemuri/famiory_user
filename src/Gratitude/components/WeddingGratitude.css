@@ -1,0 +1,524 @@
+/* Wedding Gratitude Component Styles - Scoped to avoid conflicts */
+.wedding-gratitude {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.wedding-gratitude * {
+  box-sizing: border-box;
+}
+
+/* Container */
+.wg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.wg-header {
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.wg-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wg-logo {
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-size: 32px;
+  font-weight: 500;
+  color: #996515;
+  text-shadow: 1px 1px 2px #F4E5C2;
+}
+
+.wg-back-btn {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.wg-back-btn:hover {
+  color: #996515;
+  background-color: #F4E5C2;
+}
+
+/* Hero Section */
+.wg-hero {
+  background: linear-gradient(135deg, #E8A5A5 0%, #FFE5E5 100%);
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wg-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #996515;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.wg-hero p {
+  font-size: 18px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.wg-main-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Sidebar */
+.wg-sidebar {
+  flex: 1;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.wg-sidebar h2 {
+  font-family: 'Playfair Display', serif;
+  color: #996515;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  border-bottom: 1px solid #F4E5C2;
+  padding-bottom: 10px;
+}
+
+.wg-guest-list-selector {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #F4E5C2;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.wg-guest-list-selector:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+.wg-guest-list-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.wg-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.wg-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wg-btn-primary {
+  background-color: #D4AF37;
+  color: #fff;
+}
+
+.wg-btn-primary:hover:not(:disabled) {
+  background-color: #996515;
+  transform: translateY(-2px);
+}
+
+.wg-btn-outline {
+  background: #fff;
+  border: 1px solid #D4AF37;
+  color: #996515;
+}
+
+.wg-btn-outline:hover:not(:disabled) {
+  background-color: #F4E5C2;
+  transform: translateY(-2px);
+}
+
+.wg-btn-whatsapp {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.wg-btn-whatsapp:hover:not(:disabled) {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+}
+
+.wg-btn-small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.wg-btn-large {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+/* Guest List */
+.wg-guest-list-container {
+  position: relative;
+}
+
+.wg-guest-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.wg-guest-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.wg-guest-item:hover {
+  background-color: #F4E5C2;
+}
+
+.wg-guest-checkbox {
+  margin-right: 15px;
+  width: 18px;
+  height: 18px;
+  accent-color: #D4AF37;
+  display: none;
+}
+
+.wg-edit-mode .wg-guest-checkbox {
+  display: block;
+}
+
+.wg-guest-info {
+  flex: 1;
+}
+
+.wg-guest-name {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.wg-guest-phone {
+  font-size: 14px;
+  color: #777;
+}
+
+.wg-remove-guest {
+  color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.wg-remove-guest:hover {
+  color: #e74c3c;
+  background-color: #fff;
+}
+
+.wg-finalized-list {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  border-top: 2px solid #F4E5C2;
+  padding-top: 15px;
+}
+
+.wg-finalized-list h3 {
+  font-family: 'Playfair Display', serif;
+  color: #996515;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.wg-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #777;
+}
+
+/* Right Content */
+.wg-content-right {
+  flex: 2;
+}
+
+.wg-message-section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.wg-message-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #996515;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  border-bottom: 1px solid #F4E5C2;
+  padding-bottom: 10px;
+}
+
+.wg-upload-area {
+  border: 2px dashed #F4E5C2;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.wg-upload-area:hover {
+  border-color: #D4AF37;
+  background-color: #F4E5C2;
+}
+
+.wg-upload-icon {
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+.wg-upload-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.wg-upload-subtext {
+  font-size: 14px;
+  color: #777;
+}
+
+.wg-video-preview {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wg-message-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Delivery Section */
+.wg-delivery-section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.wg-delivery-section h3 {
+  font-family: 'Playfair Display', serif;
+  color: #996515;
+  margin: 0 0 15px 0;
+  font-size: 22px;
+}
+
+.wg-delivery-section p {
+  color: #777;
+  margin: 0 0 25px 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modal */
+.wg-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.wg-modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wg-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wg-modal-header h3 {
+  font-family: 'Playfair Display', serif;
+  color: #996515;
+  font-size: 22px;
+  margin: 0;
+}
+
+.wg-close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.wg-close-modal:hover {
+  background-color: #F4E5C2;
+}
+
+.wg-form-group {
+  margin-bottom: 20px;
+}
+
+.wg-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.wg-form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #F4E5C2;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.wg-form-control:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+.wg-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .wg-main-content {
+    flex-direction: column;
+  }
+  
+  .wg-hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wg-guest-list-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .wg-message-actions {
+    flex-direction: column;
+  }
+  
+  .wg-btn {
+    width: 100%;
+  }
+  
+  .wg-modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .wg-modal-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .wg-hero {
+    padding: 40px 0;
+  }
+  
+  .wg-hero h1 {
+    font-size: 28px;
+  }
+  
+  .wg-hero p {
+    font-size: 16px;
+  }
+  
+  .wg-upload-area {
+    padding: 30px 20px;
+  }
+  
+  .wg-sidebar, .wg-message-section, .wg-delivery-section {
+    padding: 20px;
+  }
+}
